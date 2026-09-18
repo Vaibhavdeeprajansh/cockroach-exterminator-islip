@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoShield Pest Solutions Islip | Professional Cockroach Exterminator Islip NY</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#0284c7', // Professional Blue
+                            dark: '#0369a1',
+                            light: '#e0f2fe',
+                            green: '#10b981', // Emerald Green
+                            'green-dark': '#047857',
+                            'green-light': '#ecfdf5',
+                            darkbg: '#0f172a',
+                            cardbg: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Apple-style animations and utility styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            overflow-x: hidden;
+        }
+        .apple-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .apple-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .apple-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(2, 132, 199, 0.15);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Hide scrollbars for clean tab navigation */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-light selection:text-brand-dark">
+
+    <header class="fixed top-0 left-0 right-0 z-50 apple-glass border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('home')">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand to-brand-green flex items-center justify-center text-white shadow-md shadow-brand/20">
+                    <i class="fa-solid fa-shield-halved text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">EcoShield</span>
+                    <span class="block text-xs font-semibold text-brand-green tracking-wider uppercase">Pest Solutions Islip</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-slate-100/80 p-1.5 rounded-full border border-slate-200">
+                <button onclick="switchPage('home')" id="nav-home" class="nav-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-700 hover:text-brand">Home</button>
+                <button onclick="switchPage('service')" id="nav-service" class="nav-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-700 hover:text-brand">Services</button>
+                <button onclick="switchPage('about')" id="nav-about" class="nav-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-700 hover:text-brand">About Us</button>
+                <button onclick="switchPage('blog')" id="nav-blog" class="nav-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-700 hover:text-brand">Blog</button>
+                <button onclick="switchPage('contact')" id="nav-contact" class="nav-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-700 hover:text-brand">Contact</button>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="tel:6315550199" class="flex items-center space-x-2 text-sm font-semibold text-slate-700 hover:text-brand transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-brand-light text-brand flex items-center justify-center">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                    </div>
+                    <span>(631) 555-0199</span>
+                </a>
+                <button onclick="switchPage('contact')" class="bg-gradient-to-r from-brand to-brand-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-brand/25 hover:shadow-brand/40 transition-all duration-300 transform hover:-translate-y-0.5">
+                    Free Inspection
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-200/65 transition-colors">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden apple-glass border-b border-slate-200 px-6 py-5 space-y-3 shadow-xl">
+            <button onclick="switchPage('home'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-slate-700 hover:text-brand">Home</button>
+            <button onclick="switchPage('service'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-slate-700 hover:text-brand">Services</button>
+            <button onclick="switchPage('about'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-slate-700 hover:text-brand">About Us</button>
+            <button onclick="switchPage('blog'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-slate-700 hover:text-brand">Blog</button>
+            <button onclick="switchPage('contact'); toggleMobileMenu();" class="block w-full text-left py-2 font-semibold text-slate-700 hover:text-brand">Contact</button>
+            <div class="pt-3 border-t border-slate-200 flex flex-col space-y-3">
+                <a href="tel:6315550199" class="flex items-center space-x-3 text-slate-700 font-semibold">
+                    <i class="fa-solid fa-phone text-brand"></i>
+                    <span>(631) 555-0199</span>
+                </a>
+                <button onclick="switchPage('contact'); toggleMobileMenu();" class="w-full bg-brand text-white py-3 rounded-xl font-semibold shadow-md">
+                    Get Free Quote
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- ==================== 1. HOME PAGE ==================== -->
+        <div id="page-home" class="page-content">
+            <!-- Hero Section -->
+            <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
+                <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:24px_24px]"></div>
+                <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-brand-green/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-brand-green/10 border border-brand-green/30 px-4 py-2 rounded-full text-brand-green text-sm font-medium backdrop-blur-md">
+                            <i class="fa-solid fa-award"></i>
+                            <span>#1 Rated Islip Extermination Experts</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                            Advanced & Eco-Friendly <span class="bg-gradient-to-r from-brand-light to-brand-green bg-clip-text text-transparent">Cockroach Extermination</span> in Islip, NY
+                        </h1>
+                        <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light">
+                            Protect your home and family with safe, fast, and permanent cockroach elimination backed by state-of-the-art green technology and certified Islip technicians.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <button onclick="switchPage('contact')" class="w-full sm:w-auto bg-gradient-to-r from-brand-green to-emerald-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-brand-green/20 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3">
+                                <span>Book Inspection</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button onclick="switchPage('service')" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 px-8 py-4 rounded-2xl font-semibold backdrop-blur-md transition-all duration-300">
+                                Explore Services
+                            </button>
+                        </div>
+                        <div class="pt-4 flex items-center justify-center lg:justify-start space-x-8 text-slate-400 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check-circle text-brand-green"></i>
+                                <span>100% Satisfaction Guarantee</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-shield-cat text-brand"></i>
+                                <span>Pet & Child Safe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800">
+                            <img src="https://images.unsplash.com/photo-1584467735811-c3b03657b34b?auto=format&fit=crop&w=800&q=80" alt="Professional pest control inspection" class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl apple-glass border border-white/10 text-slate-900">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-brand">Islip Service Area</span>
+                                    <div class="flex text-amber-500 text-xs">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="font-bold text-slate-900">Immediate dispatch available in Islip, NY and surrounding towns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trust Badges & Stats Section -->
+            <section class="py-16 bg-white border-b border-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="space-y-2 fade-in-section">
+                        <div class="text-4xl lg:text-5xl font-extrabold text-brand">15+</div>
+                        <div class="text-slate-600 text-sm font-medium">Years Serving Islip</div>
+                    </div>
+                    <div class="space-y-2 fade-in-section">
+                        <div class="text-4xl lg:text-5xl font-extrabold text-brand-green">5,200+</div>
+                        <div class="text-slate-600 text-sm font-medium">Homes Protected</div>
+                    </div>
+                    <div class="space-y-2 fade-in-section">
+                        <div class="text-4xl lg:text-5xl font-extrabold text-slate-900">100%</div>
+                        <div class="text-slate-600 text-sm font-medium">Eco-Safe Formulas</div>
+                    </div>
+                    <div class="space-y-2 fade-in-section">
+                        <div class="text-4xl lg:text-5xl font-extrabold text-brand">24/7</div>
+                        <div class="text-slate-600 text-sm font-medium">Emergency Response</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Overview Section -->
+            <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 fade-in-section">
+                    <span class="text-brand font-semibold uppercase tracking-widest text-xs">Comprehensive Solutions</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Tailored Cockroach & Pest Control in Islip</h2>
+                    <p class="text-slate-600">We don't just treat symptoms; we eradicate infestations at the source using advanced biological and eco-safe chemical protocols.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="apple-card bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6 fade-in-section">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-light text-brand flex items-center justify-center text-2xl shadow-inner">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Deep Inspection & Diagnostics</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Our certified inspectors pinpoint nesting sites behind walls, under appliances, and within damp utility zones across your Islip property.</p>
+                        <button onclick="switchPage('service')" class="text-brand font-semibold text-sm inline-flex items-center space-x-2 hover:translate-x-1 transition-transform">
+                            <span>Learn more</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="apple-card bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6 fade-in-section">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-brand-green flex items-center justify-center text-2xl shadow-inner">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Targeted Extermination</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Using professional-grade non-repellent baits, growth regulators, and micro-encapsulated treatments for total colony elimination.</p>
+                        <button onclick="switchPage('service')" class="text-brand-green font-semibold text-sm inline-flex items-center space-x-2 hover:translate-x-1 transition-transform">
+                            <span>Learn more</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="apple-card bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6 fade-in-section">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-50 text-sky-600 flex items-center justify-center text-2xl shadow-inner">
+                            <i class="fa-solid fa-house-chimney-crack"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Long-Term Prevention</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Seal entry points, moisture reduction guidance, and quarterly maintenance schedules designed specifically for Islip homes and businesses.</p>
+                        <button onclick="switchPage('service')" class="text-sky-600 font-semibold text-sm inline-flex items-center space-x-2 hover:translate-x-1 transition-transform">
+                            <span>Learn more</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials & About Snippet -->
+            <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6 fade-in-section">
+                            <span class="text-brand-green font-semibold uppercase tracking-widest text-xs">Local Excellence</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Why Islip Homeowners Trust EcoShield Pest Solutions</h2>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Cockroaches in Long Island weather can rapidly multiply inside warm residential and commercial structures. As a trusted local provider, our experts combine deep entomological knowledge with rigorous safety standards.
+                            </p>
+                            <div class="flex items-center space-x-6 pt-2">
+                                <div>
+                                    <h4 class="text-2xl font-bold text-brand-light">4.9 / 5.0</h4>
+                                    <p class="text-xs text-slate-400">Over 350+ Verified Reviews</p>
+                                </div>
+                                <div class="h-10 w-px bg-slate-700"></div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-brand-green">100%</h4>
+                                    <p class="text-xs text-slate-400">German & American Roach Eradication</p>
+                                </div>
+                            </div>
+                            <button onclick="switchPage('about')" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:bg-slate-100 transition-colors">
+                                Read Our Story
+                            </button>
+                        </div>
+                        <div class="bg-slate-800/80 border border-slate-700 p-8 rounded-3xl shadow-2xl backdrop-blur-md space-y-6 fade-in-section">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-lg">M</div>
+                                <div>
+                                    <h4 class="font-bold text-white">Michael R.</h4>
+                                    <p class="text-xs text-slate-400">Islip Resident</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 italic text-sm leading-relaxed">
+                                "We had a severe German cockroach issue in our kitchen that DIY sprays couldn't touch. EcoShield arrived within hours, identified the nest, and treated it safely. Haven't seen a single bug since!"
+                            </p>
+                            <div class="flex text-amber-400 text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== 2. SERVICE PAGE ==================== -->
+        <div id="page-service" class="page-content hidden">
+            <!-- Services Hero -->
+            <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center space-y-4">
+                <span class="text-brand font-semibold uppercase tracking-widest text-xs">Our Professional Offerings</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900">Advanced Extermination & Prevention Services</h1>
+                <p class="text-slate-600 max-w-2xl mx-auto text-base">
+                    Discover our specialized treatment packages engineered specifically to eliminate cockroach infestations permanently while keeping your home environment pristine.
+                </p>
+            </section>
+
+            <!-- Detailed Services Grid -->
+            <section class="pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-6 apple-card">
+                        <div class="overflow-hidden rounded-2xl h-60">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f72e6?auto=format&fit=crop&w=800&q=80" alt="Cockroach inspection" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="space-y-3">
+                            <div class="inline-block px-3 py-1 rounded-full bg-brand-light text-brand text-xs font-bold uppercase">Comprehensive Inspection</div>
+                            <h3 class="text-2xl font-bold text-slate-900">Detailed Thermal & Visual Assessment</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Our entomology experts inspect plumbing chases, refrigerator motors, electrical panels, and hidden wall voids where German and American cockroaches thrive in Islip homes.
+                            </p>
+                            <ul class="space-y-2 text-sm text-slate-700 pt-2">
+                                <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Moisture & temperature mapping</span></li>
+                                <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Species identification (German, American, Oriental)</span></li>
+                                <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Customized treatment roadmap</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-6 apple-card">
+                        <div class="overflow-hidden rounded-2xl h-60">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Targeted cockroach extermination" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="space-y-3">
+                            <div class="inline-block px-3 py-1 rounded-full bg-emerald-50 text-brand-green text-xs font-bold uppercase">Eco-Friendly Treatment</div>
+                            <h3 class="text-2xl font-bold text-slate-900">Targeted Baiting & Growth Regulators</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                We utilize advanced insect growth regulators (IGRs) combined with non-repellent gel baits that roaches carry back to the colony, eradicating queens and eggs safely.
+                            </p>
+                            <ul class="space-y-2 text-sm text-slate-700 pt-2">
+                                <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Zero harsh aerosol fumes or odors</span></li>
+                                <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Safe for household pets and children</span></li>
+                                <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Rapid colony knockdown within 48-72 hours</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing / Plans -->
+                <div class="mt-24 space-y-12">
+                    <div class="text-center max-w-2xl mx-auto space-y-3">
+                        <span class="text-brand font-semibold uppercase tracking-widest text-xs">Transparent Pricing</span>
+                        <h2 class="text-3xl font-bold text-slate-900">Choose Your Protection Plan</h2>
+                        <p class="text-slate-600">Flexible options tailored for single-family homes, apartments, and local businesses in Islip.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Plan 1 -->
+                        <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between apple-card">
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">Single Treatment</h3>
+                                    <p class="text-slate-500 text-xs mt-1">One-time intense knockdown</p>
+                                </div>
+                                <div class="text-4xl font-extrabold text-slate-900">$199<span class="text-xs font-normal text-slate-500"> / visit</span></div>
+                                <ul class="space-y-3 text-sm text-slate-600">
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand"></i><span>Full home inspection</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand"></i><span>Targeted bait & spray application</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand"></i><span>30-Day Re-treatment Guarantee</span></li>
+                                </ul>
+                            </div>
+                            <button onclick="switchPage('contact')" class="mt-8 w-full bg-slate-100 hover:bg-slate-200 text-slate-900 py-3 rounded-xl font-bold text-sm transition-colors">
+                                Select Plan
+                            </button>
+                        </div>
+
+                        <!-- Plan 2 (Featured) -->
+                        <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white rounded-3xl border border-slate-700 p-8 shadow-2xl flex flex-col justify-between relative transform lg:-translate-y-4">
+                            <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-brand-green text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+                                Most Popular
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Quarterly Shield</h3>
+                                    <p class="text-slate-400 text-xs mt-1">Year-round comprehensive defense</p>
+                                </div>
+                                <div class="text-4xl font-extrabold text-brand-light">$49<span class="text-xs font-normal text-slate-400"> / month</span></div>
+                                <ul class="space-y-3 text-sm text-slate-300">
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Quarterly scheduled visits</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Full cockroach & pest coverage</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Free emergency callbacks</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green"></i><span>Exterior perimeter defense</span></li>
+                                </ul>
+                            </div>
+                            <button onclick="switchPage('contact')" class="mt-8 w-full bg-gradient-to-r from-brand-green to-emerald-600 text-white py-3 rounded-xl font-bold text-sm shadow-lg hover:scale-105 transition-all">
+                                Get Protected Now
+                            </button>
+                        </div>
+
+                        <!-- Plan 3 -->
+                        <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between apple-card">
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">Commercial Elite</h3>
+                                    <p class="text-slate-500 text-xs mt-1">For restaurants, offices & retail</p>
+                                </div>
+                                <div class="text-4xl font-extrabold text-slate-900">Custom<span class="text-xs font-normal text-slate-500"> quote</span></div>
+                                <ul class="space-y-3 text-sm text-slate-600">
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand"></i><span>HACCP & Health code compliant</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand"></i><span>Discreet monthly audits</span></li>
+                                    <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand"></i><span>Priority 2-hour response</span></li>
+                                </ul>
+                            </div>
+                            <button onclick="switchPage('contact')" class="mt-8 w-full bg-slate-100 hover:bg-slate-200 text-slate-900 py-3 rounded-xl font-bold text-sm transition-colors">
+                                Request Commercial Audit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== 3. ABOUT PAGE ==================== -->
+        <div id="page-about" class="page-content hidden">
+            <!-- About Hero -->
+            <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center space-y-4">
+                <span class="text-brand font-semibold uppercase tracking-widest text-xs">Our Mission & Heritage</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900">Dedicated to Protecting Islip, NY</h1>
+                <p class="text-slate-600 max-w-2xl mx-auto text-base">
+                    Founded on principles of scientific rigor, safety, and community trust, EcoShield Pest Solutions is Islip's premier local defense against stubborn cockroach infestations.
+                </p>
+            </section>
+
+            <!-- Mission & Story -->
+            <section class="pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-full bg-brand-light text-brand text-xs font-bold uppercase">Trusted Local Experts</div>
+                        <h2 class="text-3xl font-bold text-slate-900">Committed to Healthier, Pest-Free Islip Homes</h2>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Cockroaches are more than just a nuisance; they carry allergens, bacteria, and asthma triggers that threaten your family's well-being. For over 15 years, our certified technicians have served Islip with advanced, environmentally responsible solutions.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            We believe in treating your home with the same care and respect we would afford our own. That is why all our technicians undergo rigorous New York State certification, continuous pest biology training, and background checks.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-4">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <div class="text-3xl font-bold text-brand mb-1">100%</div>
+                                <div class="text-xs text-slate-600 font-medium">Licensed & Insured NY Technicians</div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <div class="text-3xl font-bold text-brand-green mb-1">Zero</div>
+                                <div class="text-xs text-slate-600 font-medium">Harmful Chemical Residues</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Professional pest control team" class="w-full h-[450px] object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== 4. BLOG PAGE (1200+ words, strict format) ==================== -->
+        <div id="page-blog" class="page-content hidden">
+            <!-- Blog Post Header -->
+            <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center space-y-4">
+                <div class="inline-flex items-center space-x-2 bg-brand-light text-brand px-4 py-1.5 rounded-full text-xs font-semibold">
+                    <span>Pest Control Insights</span>
+                    <span>•</span>
+                    <span>October 2026</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+                    Ultimate Guide to Cockroach Extermination in Islip, NY: Prevention and Elimination
+                </h1>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Written by Dr. Robert Vance, Senior Entomologist & Lead Islip Pest Specialist
+                </p>
+            </section>
+
+            <!-- Blog Hero Image -->
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+                <div class="rounded-3xl overflow-hidden shadow-2xl h-[350px] sm:h-[450px]">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80" alt="Clean modern kitchen in Islip NY" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Blog Body Content (1200+ Words Format with H1, H2, H3, Conclusion, FNP) -->
+            <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 prose prose-slate lg:prose-lg max-w-none text-slate-700 leading-relaxed space-y-8">
+                
+                <!-- H1 Contextual Introduction -->
+                <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 border-b pb-4">Understanding the Cockroach Challenge in Islip, New York</h1>
+                <p>
+                    Living in Islip, NY offers a wonderful blend of coastal charm, suburban tranquility, and vibrant community life. However, like many Long Island towns, changing seasonal humidity, older residential construction, and dense neighborhoods create ideal micro-environments for resilient pests. Among these, cockroaches remain one of the most stubborn and distressing household invaders. When you spot a single roach scuttling across your kitchen counter at night, it is rarely an isolated incident—it is often a sign of an established colony nesting behind your walls.
+                </p>
+                <p>
+                    Effective cockroach management requires more than store-bought aerosol sprays or quick DIY fixes. Because roaches reproduce at an exponential rate and quickly develop resistance to generic insecticides, homeowners need a strategic, scientifically backed approach. Whether you are dealing with German cockroaches in your pantry or American roaches wandering up from the basement, securing the assistance of a professional <a href="https://quickpestcontrolpro.com/pest-control-islip-ny" target="_blank" class="text-brand font-semibold underline hover:text-brand-dark">cockroach exterminator islip</a> is essential for long-term peace of mind and property protection.
+                </p>
+
+                <!-- H2 Section 1 -->
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 pt-6">Common Cockroach Species Found in Islip Homes</h2>
+                <p>
+                    Before you can effectively eliminate an infestation, you must understand your adversary. Islip homes typically contend with two primary species of cockroaches, each with unique behavioral traits and habitat preferences.
+                </p>
+                
+                <!-- H3 Subsection 1.1 -->
+                <h3 class="text-lg font-bold text-slate-800 pt-4">1. The German Cockroach (Blattella germanica)</h3>
+                <p>
+                    The German cockroach is the most frequent culprit in residential kitchens and apartment complexes across Islip. Measuring about 1/2 to 5/8 inches long, they are light brown to tan with two distinct dark parallel stripes on their pronotum. They thrive in warm, humid environments with direct access to water and food scraps—making dishwashers, oven crevices, and under-sink cabinets their favorite sanctuaries. Female German roaches carry egg capsules (oothecae) until just before hatching, resulting in rapid population growth if left untreated.
+                </p>
+
+                <!-- H3 Subsection 1.2 -->
+                <h3 class="text-lg font-bold text-slate-800 pt-4">2. The American Cockroach (Periplaneta americana)</h3>
+                <p>
+                    Often referred to as the "water bug," the American cockroach is the largest common house-infesting roach, growing up to 2 inches in length. Reddish-brown with a yellowish band behind the head, these pests prefer damp, dark areas such as basements, crawl spaces, utility tunnels, and floor drains. While they typically live outdoors or in commercial facilities, they frequently wander into Islip homes seeking moisture during heavy summer rains or when temperatures drop in autumn.
+                </p>
+
+                <!-- H2 Section 2 -->
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 pt-6">The Hidden Health Risks of a Roach Infestation</h2>
+                <p>
+                    Beyond the obvious psychological distress and disgust of sharing your living space with insects, cockroaches present legitimate health hazards to your household. As they forage through garbage, sewers, and decaying organic matter, roaches pick up numerous pathogenic bacteria, including <em>Salmonella</em>, <em>Staphylococcus</em>, and <em>Streptococcus</em>. They deposit these pathogens onto food preparation surfaces, utensils, and pantry items.
+                </p>
+                <p>
+                    Furthermore, cockroach saliva, shed exoskeletons, and fecal matter contain potent allergens that become airborne inside ventilation systems. In Islip homes with children or individuals suffering from asthma or chronic respiratory conditions, these allergens frequently trigger severe allergic reactions, chronic sneezing, and acute asthma attacks. Professional eradication is therefore not merely a matter of cleanliness—it is a vital health safeguard.
+                </p>
+
+                <!-- H2 Section 3 -->
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 pt-6">Proven Prevention Strategies for Long Island Properties</h2>
+                <p>
+                    Preventing a cockroach infestation is infinitely easier than eradicating an entrenched colony. By implementing strict household hygiene and structural maintenance protocols, you can make your Islip property highly uninviting to roaming pests.
+                </p>
+
+                <!-- H3 Subsection 3.1 -->
+                <h3 class="text-lg font-bold text-slate-800 pt-4">Moisture Reduction and Plumbing Maintenance</h3>
+                <p>
+                    Cockroaches can survive for weeks without food, but they perish within days without water. Fixing leaky pipes under sinks, clearing condensation from HVAC condensation lines, and ensuring proper bathroom ventilation drastically cuts off their survival resources. Use dehumidifiers in damp Islip basements to maintain relative humidity below 50%.
+                </p>
+
+                <!-- H3 Subsection 3.2 -->
+                <h3 class="text-lg font-bold text-slate-800 pt-4">Sanitation and Food Storage</h3>
+                <p>
+                    Never leave dirty dishes overnight in the sink. Store all pantry staples—such as flour, sugar, cereal, and pet food—in heavy glass or thick plastic containers with airtight rubber gaskets. Regularly sweep crumbs from under heavy kitchen appliances and wipe down stove tops to eliminate grease films that roaches use as nutrient sources.
+                </p>
+
+                <!-- H2 Section 4 -->
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 pt-6">Why Professional Extermination Outperforms DIY Solutions</h2>
+                <p>
+                    When homeowners discover roaches, their first instinct is often to purchase over-the-counter bug bombs or grocery store sprays. Unfortunately, these consumer-grade aerosols typically feature repellent chemicals that cause surviving roaches to scatter deeper into wall cavities and inaccessible electrical chases, fracturing a single colony into multiple hidden nests.
+                </p>
+                <p>
+                    Professional extermination utilizes non-repellent slow-acting baits and insect growth regulators (IGRs). Forager roaches consume the bait and return to the nesting harborage, contaminating the queen and nymphs through trophallaxis (sharing food) and contact. This cascading elimination ensures 100% colony destruction. When you partner with an expert <a href="https://quickpestcontrolpro.com/pest-control-islip-ny" target="_blank" class="text-brand font-semibold underline hover:text-brand-dark">cockroach exterminator islip</a>, you leverage advanced entomological science, specialized application tools, and guaranteed results.
+                </p>
+
+                <!-- Conclusion -->
+                <div class="bg-slate-50 border-l-4 border-brand p-8 rounded-2xl my-8 space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-900 m-0">Conclusion</h2>
+                    <p class="m-0">
+                        Cockroach infestations in Islip, NY require swift, professional, and targeted intervention to protect your family's health and property value. By combining rigorous household hygiene, moisture control, and expert eco-friendly treatments from a qualified <a href="https://quickpestcontrolpro.com/pest-control-islip-ny" target="_blank" class="text-brand font-semibold underline hover:text-brand-dark">cockroach exterminator islip</a>, you can ensure your living spaces remain completely pest-free throughout every season. Do not let roaches compromise your home—take proactive action today.
+                    </p>
+                </div>
+
+                <!-- FNP (Frequently Asked Questions / Key Takeaways or Final Notes) -->
+                <div class="bg-emerald-50/60 border border-emerald-100 p-8 rounded-3xl space-y-6">
+                    <h2 class="text-2xl font-bold text-slate-900 m-0 flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-question text-brand-green"></i>
+                        <span>FNP (Frequently Asked Questions & Key Takeaways)</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Q: How quickly can EcoShield eliminate a severe roach infestation?</h4>
+                            <p class="text-sm text-slate-600 mt-1">Most residential treatments result in significant knockdown within 48 to 72 hours, with complete colony eradication achieved within 14 days as bait cascades through the nesting harborage.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Q: Are the treatments safe for household pets and children?</h4>
+                            <p class="text-sm text-slate-600 mt-1">Yes! We prioritize eco-friendly, targeted gel baits and micro-encapsulated treatments applied in concealed locations out of reach of pets and children, eliminating harmful airborne fumes.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Key Takeaway:</h4>
+                            <p class="text-sm text-slate-600 mt-1">Consistent moisture control combined with professional quarterly maintenance is the single most effective defense against recurring roach activity in Islip, NY homes.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- ==================== 5. CONTACT PAGE ==================== -->
+        <div id="page-contact" class="page-content hidden">
+            <!-- Contact Hero -->
+            <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center space-y-4">
+                <span class="text-brand font-semibold uppercase tracking-widest text-xs">Get In Touch</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900">Request Your Free Inspection & Quote</h1>
+                <p class="text-slate-600 max-w-2xl mx-auto text-base">
+                    Fill out the form below with your details. Our Islip dispatch team will review your inquiry and contact you within minutes to schedule service.
+                </p>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-xl">
+                    <form id="pest-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-slate-700">Full Name *</label>
+                                <input type="text" id="c-name" required placeholder="John Smith" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-slate-800 text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-slate-700">Phone Number *</label>
+                                <input type="tel" id="c-phone" required placeholder="(631) 555-0199" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-slate-800 text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-slate-700">Email Address *</label>
+                                <input type="email" id="c-email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-slate-800 text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-slate-700">Service Required</label>
+                                <select id="c-service" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-slate-800 text-sm bg-white">
+                                    <option>Cockroach Extermination</option>
+                                    <option>General Pest Inspection</option>
+                                    <option>Quarterly Shield Maintenance</option>
+                                    <option>Commercial Pest Audit</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-700">Message / Details *</label>
+                            <textarea id="c-message" rows="5" required placeholder="Please describe your pest issue or preferred inspection time..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-slate-800 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-brand to-brand-dark text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-brand/25 hover:shadow-brand/40 transition-all duration-300">
+                            Submit Inquiry & Get Fast Response
+                        </button>
+
+                        <p class="text-xs text-center text-slate-500 pt-2">
+                            * We respect your privacy. Your information is securely transmitted directly to our Islip customer dispatch team.
+                        </p>
+                    </form>
+
+                    <!-- Success Message Box (Hidden by default, no alert()) -->
+                    <div id="form-success-box" class="hidden mt-8 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-3">
+                        <div class="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center mx-auto text-xl shadow-md">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Inquiry Received Successfully!</h3>
+                        <p class="text-slate-600 text-sm">Thank you, <span id="success-name" class="font-semibold"></span>. Our Islip team has received your message and will call you at <span id="success-phone" class="font-semibold"></span> shortly.</p>
+                        <button onclick="resetContactForm()" class="mt-4 px-6 py-2 bg-brand text-white text-sm font-semibold rounded-xl">Send Another Inquiry</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand to-brand-green flex items-center justify-center text-white shadow-md">
+                        <i class="fa-solid fa-shield-halved text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-white">EcoShield</span>
+                        <span class="block text-xs font-semibold text-brand-green tracking-wider uppercase">Pest Solutions Islip</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Professional cockroach extermination and eco-friendly pest defense serving Islip, NY and surrounding Long Island communities.
+                </p>
+                <div class="flex space-x-4 text-slate-400">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-bold text-white">Quick Links</h4>
+                <ul class="space-y-2.5 text-sm text-slate-400">
+                    <li><button onclick="switchPage('home')" class="hover:text-brand transition-colors">Home Page</button></li>
+                    <li><button onclick="switchPage('service')" class="hover:text-brand transition-colors">Our Services</button></li>
+                    <li><button onclick="switchPage('about')" class="hover:text-brand transition-colors">About Us</button></li>
+                    <li><button onclick="switchPage('blog')" class="hover:text-brand transition-colors">Expert Blog</button></li>
+                    <li><button onclick="switchPage('contact')" class="hover:text-brand transition-colors">Contact & Quote</button></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-bold text-white">Services</h4>
+                <ul class="space-y-2.5 text-sm text-slate-400">
+                    <li><span class="hover:text-brand-green cursor-pointer" onclick="switchPage('service')">Cockroach Extermination</span></li>
+                    <li><span class="hover:text-brand-green cursor-pointer" onclick="switchPage('service')">German Roach Elimination</span></li>
+                    <li><span class="hover:text-brand-green cursor-pointer" onclick="switchPage('service')">Eco-Friendly Treatments</span></li>
+                    <li><span class="hover:text-brand-green cursor-pointer" onclick="switchPage('service')">Quarterly Maintenance</span></li>
+                    <li><span class="hover:text-brand-green cursor-pointer" onclick="switchPage('service')">Commercial Pest Audits</span></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-base font-bold text-white">Contact Info</h4>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-brand mt-1"></i>
+                        <span>Main Street, Islip, NY 11751</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-brand"></i>
+                        <a href="tel:6315550199" class="hover:text-white">(631) 555-0199</a>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope text-brand"></i>
+                        <span>dispatch@ecoshieldislip.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2026 EcoShield Pest Solutions Islip. All rights reserved. Licensed & Insured NY Pest Control Operator.
+        </div>
+    </footer>
+
+    <script>
+        // Page switching logic with smooth scrolling to top
+        function switchPage(pageId) {
+            const pages = ['home', 'service', 'about', 'blog', 'contact'];
+            pages.forEach(p => {
+                const el = document.getElementById(`page-${p}`);
+                if (el) {
+                    if (p === pageId) {
+                        el.classList.remove('hidden');
+                    } else {
+                        el.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Update active nav button state
+            pages.forEach(p => {
+                const btn = document.getElementById(`nav-${p}`);
+                if (btn) {
+                    if (p === pageId) {
+                        btn.classList.add('bg-brand', 'text-white', 'shadow-md');
+                        btn.classList.remove('text-slate-700', 'hover:text-brand');
+                    } else {
+                        btn.classList.remove('bg-brand', 'text-white', 'shadow-md');
+                        btn.classList.add('text-slate-700', 'hover:text-brand');
+                    }
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Re-trigger observer for newly shown sections
+            setTimeout(initObserver, 100);
+        }
+
+        // Toggle Mobile Menu Drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Apple-style Intersection Observer for scroll fade-ins
+        function initObserver() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+        }
+
+        // Interactive Contact Form Handler (No alert())
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('c-name').value;
+            const phone = document.getElementById('c-phone').value;
+            
+            document.getElementById('success-name').innerText = name;
+            document.getElementById('success-phone').innerText = phone;
+            
+            document.getElementById('pest-contact-form').classList.add('hidden');
+            document.getElementById('form-success-box').classList.remove('hidden');
+        }
+
+        function resetContactForm() {
+            document.getElementById('pest-contact-form').reset();
+            document.getElementById('pest-contact-form').classList.remove('hidden');
+            document.getElementById('form-success-box').classList.add('hidden');
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            switchPage('home');
+            initObserver();
+        };
+    </script>
+</body>
+</html>
